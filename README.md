@@ -15,10 +15,7 @@ Then clone all the swift.org projects.
 After swift.org projects are cloned, run the image in a container and add the cloned projctes as a data volume:
 
 ```
-$ docker run -v <path to swift.org projects>:<container path> \
-			-it \ 
-			swift-foundation-dev \
-			/bin/bash 
+$ docker run -v <path to swift.org projects>:<container path> -it swift-foundation-dev /bin/bash 
 ```
 
 In the container, you can then build/test `swift-corelibs-foundation`.
