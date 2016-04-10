@@ -1,8 +1,7 @@
 # swift-foundation-dev
-Dockerfile for building Docker image with full development set prepared for `swift-corelibs-foundation`.
+Dockerfile for building Docker image with full development dependencies for `swift-corelibs-foundation`.
 
 ## Howto
-This docker image only contains development dependencies for swift.org projects.
 
 First, pull the image from docker hub:
 
