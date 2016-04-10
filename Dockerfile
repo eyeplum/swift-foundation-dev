@@ -1,4 +1,5 @@
 FROM ubuntu:15.10
+MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update && \
         apt-get install -y \
