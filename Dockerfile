@@ -21,11 +21,3 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-// copy swift source to container
-RUN cd SRC_ROOT/swift && \
-    ./utils/build-script --foundation --xctest
-
-// build foundation && run tests
-RUN cd SRC_ROOT/swift-corelibs-foundation && \
-    ninja test
-
