@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:14.04
 MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update && \
