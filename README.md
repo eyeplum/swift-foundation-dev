@@ -1,9 +1,10 @@
 # swift-foundation-dev
+
 Dockerfile for building Docker image with full development dependencies for `swift-corelibs-foundation`.
 
-## Use this image to develop Swift.org projects
+## Howto
 
-If you want to build / test Swift.org projects, first pull this image from docker hub:
+To build or test `swift-corelibs-foundation`, first pull this image from docker hub:
 
 ```
 docker pull eyeplum/swift-foundation-dev
@@ -20,7 +21,7 @@ docker run -it \
     /bin/bash
 ```
 
-In my experience, at least 4GB of memory is needed for building Swift, but the default memory is 2GB for docker machines.
+In my experience, at least 4GB of memory is needed for building Swift, but the default memory is 2GB for docker containers.
 
 So make sure you tweak the configurations before jump into the container and build Swift, otherwise you may encounter an error similar to this:
 
