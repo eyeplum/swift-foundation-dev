@@ -21,7 +21,7 @@ docker run -it \
     /bin/bash
 ```
 
-In my experience, at least 6GB of memory is needed for building Swift, but the default memory is 2GB for docker containers.
+In my experience, at least 6GB (5734MB in my case) of memory is needed for building Swift, but the default memory is 2GB for docker containers.
 
 So make sure you tweak the configurations before jump into the container and build Swift, otherwise you may encounter an error similar to this:
 
