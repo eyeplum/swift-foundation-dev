@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:15.10
 MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update && \
@@ -18,7 +18,8 @@ RUN apt-get update && \
         swig \
         libpython-dev \
         libncurses5-dev \
-        pkg-config && \
+        pkg-config \
+        libblocksruntime-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
