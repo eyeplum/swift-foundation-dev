@@ -20,9 +20,7 @@ RUN apt-get update && \
         libncurses5-dev \
         pkg-config \
         libblocksruntime-dev && \
-RUN apt-get update && \
-    apt-get install -y \
-        software-properties-common && \
+    apt-get install -y software-properties-common && \
     apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
     apt-get install -y --force-yes \
         clang-3.8 \
