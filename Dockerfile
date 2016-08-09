@@ -1,6 +1,7 @@
 FROM ubuntu:15.10
 MAINTAINER Yan Li<eyeplum@gmail.com>
 
+RUN apt-get update && apt-get install software-properties-common
 RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
         apt-get update && \
         apt-get install -y \
