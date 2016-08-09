@@ -17,10 +17,10 @@ RUN apt-get update && \
         ninja-build \
         pkg-config \
         python \
-        software-properties-common \
         swig \
         uuid-dev
 
+RUN apt-get install -y software-properties-common 
 RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
         apt-get update && \
         apt-get install -y --force-yes \
