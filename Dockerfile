@@ -2,24 +2,28 @@ FROM ubuntu:15.10
 MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update && \
-        apt-get install -y \
-        git \
+    apt-get install -y \
+        software-properties-common && \
+    apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
+    apt-get update && \
+    apt-get install -y --force-yes \
+        clang-3.8 \
         cmake \
-        ninja-build \
-        clang \
-        python \
-        uuid-dev \
-        libicu-dev \
+        git \
         icu-devtools \
+        libblocksruntime-dev && \
         libbsd-dev \
         libedit-dev \
-        libxml2-dev \
-        libsqlite3-dev \
-        swig \
+        libicu-dev \
         libpython-dev \
         libncurses5-dev \
+        libsqlite3-dev \
+        libxml2-dev \
+        lldb-3.8 \
+        ninja-build \
         pkg-config \
-        libblocksruntime-dev && \
+        python \
+        swig \
+        uuid-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
