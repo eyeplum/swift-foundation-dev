@@ -4,7 +4,7 @@ MAINTAINER Yan Li<eyeplum@gmail.com>
 RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
         apt-get update && \
-        apt-get install -y \
+        apt-get install -y --force-yes \
         clang-3.8 \
         cmake \
         git \
