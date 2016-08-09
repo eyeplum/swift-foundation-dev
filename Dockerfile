@@ -5,7 +5,6 @@ RUN apt-get update && \
     apt-get install -y \
         software-properties-common && \
     apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
-    apt-add-repository "deb-src http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
     apt-get update && \
     apt-get install -y --force-yes \
         clang-3.8 \
