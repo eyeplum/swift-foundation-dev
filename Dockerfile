@@ -19,9 +19,7 @@ RUN apt-get update && \
         libpython-dev \
         libncurses5-dev \
         pkg-config \
-        libblocksruntime-dev && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+        libblocksruntime-dev
 
 RUN apt-get install -y software-properties-common && \
     apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
