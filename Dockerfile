@@ -7,6 +7,7 @@ RUN apt-get update && \
         cmake \
         ninja-build \
         clang \
+        lldb \
         python \
         uuid-dev \
         libicu-dev \
