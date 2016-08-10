@@ -19,10 +19,11 @@ RUN apt-get update && \
         libpython-dev \
         libncurses5-dev \
         pkg-config \
-        libblocksruntime-dev
+        libblocksruntime-dev \
+        software-properties-common
 
-RUN apt-get install -y software-properties-common && \
-    apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
+RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
+    apt-get update && \
     apt-get install -y --force-yes \
         clang-3.8 \
         lldb-3.8 && \
