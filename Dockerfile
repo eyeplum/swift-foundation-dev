@@ -8,6 +8,8 @@ RUN apt-get update && \
         ninja-build \
         clang \
         lldb \
+        lldb-dev \
+        liblldb-dbg \
         python \
         uuid-dev \
         libicu-dev \
