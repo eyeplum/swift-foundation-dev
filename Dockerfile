@@ -29,5 +29,7 @@ RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 ma
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     ln -s /usr/bin/clang-3.8 /usr/bin/clang && \
     ln -s /usr/bin/clang++-3.8 /usr/bin/clang++ && \
-    ln -s /usr/bin/lldb-3.8 /usr/bin/lldb
+    ln -s /usr/bin/lldb-3.8 /usr/bin/lldb && \
+    ln -s /usr/bin/lldb-server-3.8 /usr/bin/lldb-server && \
+    ln -s /usr/bin/lldb-mi-3.8 /usr/bin/lldb-mi
 
