@@ -15,7 +15,8 @@ Make sure the Swift.org projects is already cloned somewhere on your host machin
 Then you can start a new container with a shared docker _Data volume_ that contains the Swift.org projects:
 
 ```
-docker run -it \
+# The `--privileged` is required for lldb to work
+docker run -it --privileged \
     -v <path to swift.org projects>:<path to access data volume in container> \
     eyeplum/swift-foundation-dev \
     /bin/bash
