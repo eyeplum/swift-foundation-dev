@@ -3,15 +3,15 @@ checkout:
 
 docker:
 	docker run -it --privileged \
-  	-v /Users/eyeplum/Projects/swift.org/:/swift.org \
+		-v /Users/eyeplum/Projects/swift.org/:/swift.org \
 		eyeplum/swift-foundation-dev \
-  	/bin/bash
+		/bin/bash
 
 docker-dev:
 	docker run -it --privileged \
-  	-v /Users/eyeplum/Projects/swift.org/:/swift.org \
+		-v /Users/eyeplum/Projects/swift.org/:/swift.org \
 		eyeplum/swift-foundation-dev:dev \
-  	/bin/bash
+		/bin/bash
 
 compile:
 	swift/utils/build-script -r --xctest --foundation -j1
