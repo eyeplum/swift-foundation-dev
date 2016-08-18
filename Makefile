@@ -14,7 +14,7 @@ docker-dev:
 		/bin/bash
 
 compile:
-	swift/utils/build-script -r --xctest --foundation -j1
+	swift/utils/build-script -R --xctest --foundation -j1
 
 test:
 	LD_LIBRARY_PATH=./build/Ninja-ReleaseAssert/foundation-linux-x86_64/Foundation/:./build/Ninja-ReleaseAssert/xctest-linux-x86_64/ \
