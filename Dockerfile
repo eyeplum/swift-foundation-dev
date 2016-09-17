@@ -21,15 +21,14 @@ RUN apt-get update && \
         libblocksruntime-dev \
         software-properties-common
 
-RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.8 main" && \
+RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.9 main" && \
     apt-get update && \
     apt-get install -y --force-yes \
-        clang-3.8 \
-        lldb-3.8 && \
+        clang-3.9 \
+        lldb-3.9 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-    ln -s /usr/bin/clang-3.8 /usr/bin/clang && \
-    ln -s /usr/bin/clang++-3.8 /usr/bin/clang++ && \
-    ln -s /usr/bin/lldb-3.8 /usr/bin/lldb && \
-    ln -s /usr/bin/lldb-server-3.8 /usr/bin/lldb-server && \
-    ln -s /usr/bin/lldb-mi-3.8 /usr/bin/lldb-mi
-
+    update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.9 100 && \
+    update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.9 100 && \
+    update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-3.9 100 && \
+    update-alternatives --install /usr/bin/lldb-server lldb-server /usr/bin/lldb-server-3.9 100 && \
+    update-alternatives --install /usr/bin/lldb-mi lldb-mi /usr/bin/lldb-mi-3.9 100
