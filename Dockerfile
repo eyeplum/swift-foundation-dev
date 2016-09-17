@@ -41,4 +41,5 @@ RUN cd /tmp \
     && make \
     && make install \
     && cd .. \
-    && rm -rf cmake*
+    && rm -rf cmake* \
+    && update-alternatives --install /usr/bin/cmake cmake /usr/local/bin/cmake 100
