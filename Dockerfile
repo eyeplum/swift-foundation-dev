@@ -34,9 +34,9 @@ RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.9 ma
     && update-alternatives --install /usr/bin/lldb-mi lldb-mi /usr/bin/lldb-mi-3.9 100
 
 RUN cd /tmp \
-    && wget https://cmake.org/files/v3.6/cmake-3.6.2-Linux-x86_64.tar.gz \
-    && tar xvf cmake-3.6.2-Linux-x86_64.tar.gz \
-    && cd cmake-3.6.2-Linux-x86_64 \
+    && wget https://cmake.org/files/v3.6/cmake-3.6.2.tar.gz \
+    && tar xvf cmake-3.6.2.tar.gz \
+    && cd cmake-3.6.2 \
     && ./bootstrap \
     && make \
     && make install \
