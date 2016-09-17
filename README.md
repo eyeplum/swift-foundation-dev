@@ -35,4 +35,3 @@ ninja: build stopped: subcommand failed.
 ```
 
 Here is a [stackoverflow answer](http://stackoverflow.com/a/34598900/1258521) for how to do that.
-
