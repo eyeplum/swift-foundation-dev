@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update \
@@ -21,7 +21,7 @@ RUN apt-get update \
         libblocksruntime-dev \
         software-properties-common
 
-RUN apt-add-repository "deb http://apt.llvm.org/wily/ llvm-toolchain-wily-3.9 main" \
+RUN apt-add-repository "deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-3.9 main" \
     && apt-get update \
     && apt-get install -y --force-yes \
         clang-3.9 \
