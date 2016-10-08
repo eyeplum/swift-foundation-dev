@@ -22,6 +22,7 @@ RUN apt-get update \
         pkg-config \
         libblocksruntime-dev \
         dh-autoreconf \
+        libcurl4-openssl-dev \
         software-properties-common
 
 RUN cd /tmp \
