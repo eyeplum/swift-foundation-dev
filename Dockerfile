@@ -21,6 +21,7 @@ RUN apt-get update \
         libncurses5-dev \
         pkg-config \
         libblocksruntime-dev \
+        dh-autoreconf \
         software-properties-common
 
 RUN cd /tmp \
