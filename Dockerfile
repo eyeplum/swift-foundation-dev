@@ -3,7 +3,7 @@ MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update \
     && apt-get install -y \
-# official dependencies
+# dependencies to build swift
       git \
       cmake \
       ninja-build \
@@ -22,9 +22,11 @@ RUN apt-get update \
       pkg-config \
       libblocksruntime-dev \
       libcurl4-openssl-dev \
-# extra dependencies
+# dependencies to build swift-corelibs-libdispatch
       autoconf \
       libtool \
+      systemtap-sdt-dev \
+# dependencies to debug
       lldb \
       python-six \
 # cleanups
