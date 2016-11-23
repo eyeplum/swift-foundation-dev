@@ -3,12 +3,11 @@ MAINTAINER Yan Li<eyeplum@gmail.com>
 
 RUN apt-get update \
     && apt-get install -y \
+# official dependencies
       git \
       cmake \
-      autoconf \
       ninja-build \
       clang \
-      lldb \
       python \
       uuid-dev \
       libicu-dev \
@@ -22,5 +21,13 @@ RUN apt-get update \
       libncurses5-dev \
       pkg-config \
       libblocksruntime-dev \
-      libcurl4-openssl-dev
+      libcurl4-openssl-dev \
+# extra dependencies
+      autoconf \
+      libtool \
+      lldb \
+      python-six \
+# cleanups
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
