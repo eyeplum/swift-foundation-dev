@@ -34,3 +34,12 @@ ninja: build stopped: subcommand failed.
 ```
 
 Here is a [stackoverflow answer](http://stackoverflow.com/a/34598900/1258521) for how to do that.
+
+## About Docker for Mac Beta
+
+I've been trying to use `Docker for Mac Beta` instead of `Docker Toolbox`, as `Docker for Mac` is now the recommanded tool to use docker on macOS.
+
+Unfortunately, I found `Docker for Mac Beta` hangs (alot) in situations like out of memory, I/O error, etc. On contrast, `Docker Toolbox` will always responds with a proper error when one of these situation happens.
+
+So I recommand to use `Docker Toolbox` for now as it seems to be more reliable.
+
